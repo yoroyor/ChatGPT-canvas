@@ -7,6 +7,23 @@ For experiment of ChatGPT canvas
 - Docker
 - Docker Compose
 
+### Directory Structure
+The directory structure of the project should look like this:
+```
+<repository-directory>/
+  ├── backend/
+  │   ├── Dockerfile
+  │   ├── main.py
+  │   ├── requirements.txt
+  │   └── .env
+  ├── frontend/
+  │   ├── Dockerfile
+  │   ├── package.json
+  │   └── src/
+  ├── docker-compose.yml
+  └── README.txt
+```
+
 ### Steps
 
 1. **Clone the Repository**
@@ -39,4 +56,4 @@ For experiment of ChatGPT canvas
    ```
 
 ### Additional Notes
-- Make sure to replace `YOUR_API_KEY` in `docker-compose.yml` with your actual Alpha Vantage API key before running the application.
+- Make sure to add your actual Alpha Vantage API key in the `.env` file before running the application.
