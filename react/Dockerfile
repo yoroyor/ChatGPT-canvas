@@ -6,6 +6,7 @@ COPY package*.json ./
 RUN npm install
 
 COPY . .
+RUN mkdir -p public && echo "<!doctype html><html><head><title>React App</title></head><body><div id='root'></div></body></html>" > public/index.html
 RUN npm run build
 
 FROM nginx:alpine
