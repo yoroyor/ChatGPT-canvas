@@ -2,7 +2,8 @@ version: '3'
 
 services:
   react:
-    build: .
+    build:
+      context: ./react
     ports:
       - "3000:80"
     depends_on:
