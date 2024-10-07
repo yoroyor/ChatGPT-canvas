@@ -6,12 +6,12 @@ services:
     ports:
       - "3000:80"
     depends_on:
-      - backend
+      - fastapi
 
   fastapi:
     build:
-      context: ./backend
+      context: ./fastapi
     ports:
       - "8000:8000"
     env_file:
-      - ./backend/.env
+      - ./fastapi/.env
