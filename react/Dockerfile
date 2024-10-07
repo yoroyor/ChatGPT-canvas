@@ -1,14 +1,17 @@
-FROM node:16 AS build
+ARG APP_HOME=/home/node/app
 
-WORKDIR /app
+# build stage
+FROM node:14.17 as build
+WORKDIR ${APP_HOME}
 
-COPY package*.json ./
-RUN npm install
+COPY . ${APP_HOME}
+RUN yarn install
+RUN yarn build
 
-RUN npm run build
-
+# deploy stage
 FROM nginx:alpine
-COPY --from=build /app/build /var/www
+COPY --from=build ${APP_HOME}/build /var/www
+COPY ./nginx /etc/nginx/conf.d/
 
-EXPOSE 80
+WORKDIR /usr/share/nginx/html
 CMD ["nginx", "-g", "daemon off;"]
