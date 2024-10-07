@@ -1,6 +1,9 @@
 from fastapi import FastAPI
 import httpx
 import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 app = FastAPI()
 
