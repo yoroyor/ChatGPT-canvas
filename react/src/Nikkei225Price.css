@@ -1,0 +1,9 @@
+.chart-container {
+  text-align: center;
+  margin: 20px;
+}
+
+.error-message {
+  color: red;
+  font-weight: bold;
+}
