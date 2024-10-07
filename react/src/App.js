@@ -1,5 +1,5 @@
 import React from 'react';
-import Nikkei225Price from './Nikkei225Price.js';
+import Nikkei225Price from './Nikkei225Price';
 import './App.css';
 
 function App() {
