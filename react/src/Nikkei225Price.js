@@ -65,3 +65,5 @@ function Nikkei225Price() {
     </div>
   );
 }
+
+export default Nikkei225Price;
